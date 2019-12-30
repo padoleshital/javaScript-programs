@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <title>Array using for loop</title>
+<head>
+</head>
+<body>
+    <p id="demo"></p>
+    
+    <script>
+    var i,text,cleng;
+    var car = ["polo","tata","BMW","audi","swift"]; 
+    cleng = car.length;         //car length store variable
+
+    text = "<ul>";                //text will print in unorder list
+    for(i = 0;i < cleng; i++)
+    {
+        text += "<li>" + car[i] +"</li>";
+    }
+    text += "</ul>";
+
+    
+    document.getElementById("demo").innerHTML=text; 
+    //document.getElementBy("demo").innerHTML=cleng;
+    </script>
+</body>
+</html>
