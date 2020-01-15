@@ -34,4 +34,31 @@ $Pitch =new Pitch("pitch",40,"Red"); //(subclass)constructor is public .OK
 $Pitch->intro();
 $Fruit= new Fruit("pinapple",100);  //superclass.OK
 $Fruit->intro();
+echo"<br>";
+
+//
+class Dad       //super class
+{
+    function test()
+    {
+        echo "[class Dad] i am your father<br>";
+        echo"<br>";
+    }
+
+}
+class Son extends Dad       //subclass
+{
+    function test()         //override test method
+    {
+        echo "[class Son] I am son";
+        echo"<br>";
+    }
+    function test2()
+    {
+        parent::Test();     //parent oprator for ovrriden method
+    }
+}
+$object=new Son;
+$object->test();
+$object->test2();
 ?>
