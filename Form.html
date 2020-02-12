@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>validation form using javascript</title>
+    </head>
+    <body>
+        <h1 style="text-align:center;">Registration form</h1>
+        <form name="RegForm" method="POST" action=" return Validation_Form()" style="text-align: center;">
+            <p>Name:<input type="text" name="name" ></p><br>
+            <p>Address:<textarea type="text" name="address"></textarea></p><br>
+            <p>password:<input type="password" name="password"></p><br>
+            <p>Telephone:<input type="text" name="telephone"></p><br>
+            
+            <p>SELECT YOUR COURSE:
+            
+            <select type="text" name="subject">
+            <option>java</option>
+            <option>javascript</option>
+            <option>C</option>
+            <option>C++</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            </select></p><br>
+
+            <p>Comment:<textarea col="55" name="comment"></textarea></p>
+                <p><input type="submit" value="submit" name="submit">
+                <input type="reset" value="reset" name="reset">
+                <input type="button" value="cancel" name="cancel">
+            </p>
+        </form>
+                
+        <script>
+            function Validation_Form()
+            {
+                var name = document.forms["RegForm"]["name"];
+                var address = document.form["RegForm"]["address"];
+                var password = document.form["RegForm"]["password"];
+                var telephone = document.form["RegForm"]["telephone"];
+            
+                if(name.value == "")
+                {
+                    window.alert("Please enter your.");
+                    name.focus();
+                    return false;
+                }
+                if(address.value == "")
+                {
+                    window.alert("Please enter your address");
+                    address.focus();
+                    return false;
+                }
+                if(password.value =="")
+                {
+                    window.alert("Please enter your password");
+                    password.focus();
+                    return false;
+                }
+                if(telephone.value == "")
+                {
+                    window.alert("Please enter your telephone");
+                    telephone.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
